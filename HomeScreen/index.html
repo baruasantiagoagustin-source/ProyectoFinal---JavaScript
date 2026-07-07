@@ -1,11 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>MainScreen - Juegos</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+    <div>
+        <div>
+            <h1>TriviaBlast</h1>
+        </div>
+        <div>
+            <div>
+                <p>Puntaje</p>
+                <p id="score"></p>
+            </div>
+        </div>
+    </div>
+    <section>
+        <div>
+            <h2 id="home/readyName"></h2>
+        </div>        
+    </section>
+    <ul id="juegos"></ul>
+
+
+    <script>
+        const urlAPI = 'https://quiz-api.cesar-kastli.workers.dev/games';
+
+        async function obtenerJuegos() {
+            try {
+                const respuesta = await fetch(urlAPI);
+                const datos = await respuesta.json();
+                const contenedor = document.getElementById('juegos');
+                datos.forEach((element) => {
+                    const li = document.createElement("li");
+                    li.innerHTML = `<span> titulo: ${element.title}</span> <span>id: ${element.id}</span> <img src='${element.image}'></img>`;
+                    contenedor.appendChild(li);
+                });
+            } catch (error) {
+                console.error('Error al conectar con la API:', error);
+            }
+        }
+        obtenerJuegos()
+
+        let name = localStorage.getItem('nombreUsuario')
+        const ready = document.getElementById('home/ReadyName')
+        ready.innerHTML = `Ready for a challenge ${name}?`
+
+    </script>
 </body>
+
 </html>
