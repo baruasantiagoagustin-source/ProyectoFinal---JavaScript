@@ -2,44 +2,61 @@ body {
     margin: 0;
     background-image: url(greenwallp.avif);
     background-size: auto;
-    color: aliceblue;
     font-family: "Rubik", sans-serif;
     font-weight: 100;
-    margin: auto;
-    text-align: center;
 }
 
 .content {
-    margin: 10% 25%
+    background-color: rgb(255, 255, 255);
+    border-radius: 7px;
+    text-align: center;
+    margin: 20% 15%;
+    height: auto;
+    padding: 4% 8%;
+}
+
+.fa-gamepad {
+    color: white;
+    background-color: green;
+    padding: 5px;
+    border-radius: 2000px;
+    width: 30px;
+    height: 30px;
+}
+
+h1 {
+    color: green;
+}
+
+section {
+    padding: 0 8%;
+}
+
+.bienvenida {
+    color: grey;
 }
 
 .input-box {
-    background-color: rgb(6, 93, 40);
-    border-radius: 10px;
     display: flex;
     flex-direction: column;
-    margin: 0;
-    padding: 40px;
-    box-shadow: 0px 3px 23px 3px rgba(29, 28, 28, 0.403);
-    gap: 10px;
-}
-
-.input-box . {
-    margin: 0;
+    gap: 0.5rem;
 }
 
 .input-box input {
-    height: 2rem;
-    text-align: center;
-    border-radius: 5px;
     border: none;
+    background-color: rgb(232, 232, 232);
+    border-radius: 3px;
+    padding: 10px;
 }
 
 .input-box button {
-    height: 2rem;
-    text-align: center;
-    border-radius: 5px;
+    color: white;
+    background-color: green;
     border: none;
-    color: rgb(74, 74, 74);
-    box-shadow: 3px 3px 3px 3px rgba(49, 49, 49, 0.233);
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.guardarlocalmente {
+    color: grey;
 }
