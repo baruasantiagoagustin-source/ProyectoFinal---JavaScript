@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    background-image: url(greenwallp.avif);
+    background-size: auto;
+    color: aliceblue;
+    font-family: "Rubik", sans-serif;
+    font-weight: 100;
+    margin: auto;
+    text-align: center;
+}
+
+.content {
+    margin: 10% 25%
+}
+
+.input-box {
+    background-color: rgb(6, 93, 40);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 40px;
+    box-shadow: 0px 3px 23px 3px rgba(29, 28, 28, 0.403);
+    gap: 10px;
+}
+
+.input-box . {
+    margin: 0;
+}
+
+.input-box input {
+    height: 2rem;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+}
+
+.input-box button {
+    height: 2rem;
+    text-align: center;
+    border-radius: 5px;
+    border: none;
+    color: rgb(74, 74, 74);
+    box-shadow: 3px 3px 3px 3px rgba(49, 49, 49, 0.233);
+}
